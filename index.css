@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --color-primary: #6943ff;
+  --bg-color: #1c1c1c;
+  --wrapper-conversion-bg: #F4F4F4;
+  --conversion-bg: white;
+  --conversion-heading-color: #5A537B;
+  --conversion-text-color: #353535;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+body.light {
+  --text-color: #1c1c1c;
+  --header-color: #6943ff;
+  --wrapper-conversion-bg: #F4F4F4;
+  --conversion-bg: white;
+  --conversion-heading-color: #5A537B;
+  --conversion-text-color: #353535;
+}
+
+body.dark {
+  --text-color: white;
+  --header-color: var(--color-primary);
+  --wrapper-conversion-bg: #1F2937;
+  --conversion-bg: #273549;
+  --conversion-heading-color: #CCC1FF;
+  --conversion-text-color: white;
+}
+
+header {
+  background: var(--header-color);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 16px 16px 0 0;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+main {
+  max-width: 480px;
+  margin: 5rem auto;
+}
+
+.wrapper-conversions h2 {
+  color: var(--conversion-heading-color);
+}
+
+.wrapper-conversions {
+  background: var(--wrapper-conversion-bg);
+  padding: 2rem 2rem 2rem 2rem;
+  color: white;
+  border-radius: 0 0 8px 8px;
+}
+
+.conversion {
+  border-radius: 4px;
+  background: var(--conversion-bg);
+  padding: 1rem;
+  text-align: center;
+}
+
+.conversion p {
+  margin-bottom: 0;
+  font-size: 14px;
+  color: var(--conversion-text-color)
+}
+
+.conversion:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+
+input {
+  background: transparent;
+  border: 1.5px solid gainsboro;
+  border-radius: 8px;
+  padding: 0.5rem;
+  font-size: 36px;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  margin-top: 1rem;
+  width: 80%;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+#theme-switcher {
+  background: transparent;
+  color: white;
+  font-size: 30px;
+}
+
+#theme-switcher:active {
+  animation: pop 0.2s forwards;
+}
+
+#theme-switcher svg {
+    width: 30px;
+}
+
+button {
+  display: block;
+  margin: 1rem auto 0 auto;
+  background-color: white;
+  border: 0;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  transition: transform 0.1s ease;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+button:active {
+  animation: pop 0.2s forwards;
+}
